@@ -118,3 +118,49 @@ Utilizar o `rem` para unidade de medida para manter a responsividade de qualidad
 yarn add react-router-dom
 yarn add @types/react-router-dom -D
 ```
+
+# Dia 2
+## Iniciando back-end
+
+```sh
+mkdir server
+cd server
+
+yarn init -y
+mkdir src
+
+yarn add typescript -D
+# criar arquivo de configuração do typescript
+yarn tsc --init
+# sem yarn
+npx tsc --init
+```
+
+No arquivo de configuração do typescript, modificar `"target": "es5", ` para `"target": "es2017", `, para aceitar a versão do javaScript ate 2017, validar a versão com a versão do node instalada.
+
+```sh
+# Executa no servidor no script
+yarn add ts-node-dev -D
+```
+
+Adicionar o script `"start": "tsnd --transpile-only src/server.ts"` no package.json
+
+```sh
+yarn add express
+yarn add @types/express -D
+yarn add knex sqlite3
+```
+
+Migrations com knex
+
+Script facilitar a execução das migrations, adicionar no package.json
+
+```json
+"knex:migrate": "knex --knexfile knexfile.ts migrate:latest"
+```
+
+lib permitir que aplicações em endereços distintos posso ser acessado na api.
+```sh
+yarn add cors
+yarn add @types/cors -D
+```
