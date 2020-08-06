@@ -1,34 +1,55 @@
 import React from 'react';
 
+import api from '../../services/api';
+
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
 
-const TeacherItem = () => {
+export interface Teacher {
+  avatar: string;
+  bio: string;
+  cost: number;
+  id: number;
+  name: string;
+  subject: string;
+  user_id: number;
+  whatsapp: string;
+}
+
+interface TeacherItemProps {
+  teacher: Teacher;
+}
+const TeacherItem:React.FC<TeacherItemProps> = ({teacher}) => {
+
+  function createNewConnection() {
+    api.post('connections', {
+      user_id: teacher.user_id
+    })
+  }
+
   return (
     <article className="teacher-item">
       <header>
-        <img src="https://avatars2.githubusercontent.com/u/11061074?s=460&u=e58bd33aad74eb071ca2000938a9c52ec1bf177a&v=4" alt="DKM"/>
+        <img src={teacher.avatar} alt={teacher.name}/>
         <div>
-          <strong>DKM</strong>
-          <span>Química</span>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
         </div>
       </header>
       <p>
-        Entusiasta das melhores tecnologias de química avançada.
-        <br/><br/>
-        Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.
+        {teacher.bio}
       </p>
       <footer>
         <p>
           Preço/hora
           
-          <strong>R$ 80,00</strong>
+          <strong>R$ {teacher.cost}</strong>
         </p>
-        <button type="button">
+        <a target="_blank" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`} >
           <img src={whatsappIcon} alt="WhatsApp"/>
           Entrar em contato
-        </button>
+        </a>
       </footer>
     </article>
   )

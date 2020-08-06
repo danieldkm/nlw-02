@@ -160,7 +160,16 @@ Script facilitar a execução das migrations, adicionar no package.json
 ```
 
 lib permitir que aplicações em endereços distintos posso ser acessado na api.
+
 ```sh
 yarn add cors
 yarn add @types/cors -D
+```
+
+# Dia 3
+
+## Finalizando o front-end
+
+```sh
+yarn add axios
 ```
