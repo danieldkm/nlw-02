@@ -173,3 +173,43 @@ yarn add @types/cors -D
 ```sh
 yarn add axios
 ```
+
+# Dia 5
+
+## Iniciando o mobile
+
+```sh
+# instalando o expo
+yarn global add expo-cli
+# criando o projeto
+expo init mobile
+# ? Choose a template: expo-template-blank-typescript
+cd mobile
+yarn start
+```
+
+lib para google fonts do expo
+https://github.com/expo/google-fonts
+
+```sh
+expo install expo-font @expo-google-fonts/archivo @expo-google-fonts/poppins
+```
+
+lib para fazer navegação no react native
+https://reactnavigation.org/
+
+```sh
+yarn add @react-navigation/native
+
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+yarn add @react-navigation/stack
+yarn add @react-navigation/bottom-tabs
+```
+
+- stack -> navegação em pilha
+- bottom-tabs -> em abas
+- drawer -> em menu (sandwich)
+
+Ajustando-estilo-das-abas-no-iOS
+https://www.notion.so/Ajustando-estilo-das-abas-no-iOS-28a059b0c443405da195f0ebf7307905
