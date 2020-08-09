@@ -1,6 +1,6 @@
 <h1 align="center">Next Level Week #2</h1>
 
-# Dia 1
+# Dia 1 - 03/08
 
 ## Iniciando front-end
 
@@ -119,7 +119,8 @@ yarn add react-router-dom
 yarn add @types/react-router-dom -D
 ```
 
-# Dia 2
+# Dia 2 - 04/08
+
 ## Iniciando back-end
 
 ```sh
@@ -166,7 +167,7 @@ yarn add cors
 yarn add @types/cors -D
 ```
 
-# Dia 3
+# Dia 3 - 05/08
 
 ## Finalizando o front-end
 
@@ -174,7 +175,7 @@ yarn add @types/cors -D
 yarn add axios
 ```
 
-# Dia 5
+# Dia 4 - 06/08
 
 ## Iniciando o mobile
 
@@ -213,3 +214,22 @@ yarn add @react-navigation/bottom-tabs
 
 Ajustando-estilo-das-abas-no-iOS
 https://www.notion.so/Ajustando-estilo-das-abas-no-iOS-28a059b0c443405da195f0ebf7307905
+
+# Dia 5 - 07/08
+
+## Finalizando mobile
+
+- expo picker para selecionar uma opção
+
+- consultar api
+
+```sh
+yarn add axios
+```
+
+- whatsapp deep link
+- [expo asyncstorage](https://docs.expo.io/versions/latest/sdk/async-storage/)
+
+```sh
+expo install @react-native-community/async-storage
+```
